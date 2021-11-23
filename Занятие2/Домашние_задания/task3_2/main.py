@@ -1,6 +1,6 @@
 def positional_arguments(fn):
     def wrapper(*args):
-        list_ = [i for i in [*args] if type(i) == int]
+        list_ = [i for i in args if type(i) == int]
         if [*args] == list_:
             print("Все аргументы функции являются типом int")
         result = fn(*args)

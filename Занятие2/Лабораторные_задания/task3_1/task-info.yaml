@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 54
-    length: 94
+    length: 3
     placeholder_text: '# TODO написать проверку положительности аргумента arg'
     initial_state:
       length: 54
@@ -15,7 +15,7 @@ files:
     encrypted_possible_answer: |-
       if not arg > 0:
                   raise ValueError("Аргумент функции не является положительным числом")
-  - offset: 219
+  - offset: 128
     length: 15
     placeholder_text: '# TODO задекорировать функцию'
     initial_state:

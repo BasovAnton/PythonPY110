@@ -27,7 +27,7 @@ files:
       offset: 52
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Failed
     encrypted_possible_answer: '{i: i ** 2 for i in range(1, 11)}'
   - offset: 124
     length: 45
@@ -37,7 +37,7 @@ files:
       offset: 124
     initialized_from_dependency: false
     selected: false
-    status: Unchecked
+    status: Failed
     encrypted_possible_answer: json.dumps(dict_numbers, indent=4)
   text: |
     import json
@@ -54,5 +54,23 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-status: Unchecked
+status: Failed
+feedback:
+  message: Incorrect
+  time: Tue, 23 Nov 2021 17:51:22 UTC
+  expected: |
+    {
+        "1": 1,
+        "2": 4,
+        "3": 9,
+        "4": 16,
+        "5": 25,
+        "6": 36,
+        "7": 49,
+        "8": 64,
+        "9": 81,
+        "10": 100
+    }
+  actual: |
+    Ellipsis
 record: -1

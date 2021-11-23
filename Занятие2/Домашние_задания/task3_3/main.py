@@ -1,22 +1,26 @@
-def iter_arguments(fn):
-    def wrapper(*args, **kwargs):
-        print(*args)
-        try:
-            iter(*args)
-        except TypeError:
-            print('ff')
-        #if iter(*args) != TypeError and iter({**kwargs}) != TypeError:
-            #print("Все объекты итерируемые")
-        result = fn(*args, **kwargs)
-        return result
-
-    return wrapper
-
-
-@iter_arguments
-def some_func(n, b, m, s):
-    ...
-
-
 if __name__ == "__main__":
-    some_func(7, 8, m=8, s=9)
+    def decorator(fn):
+
+        def wrapper(*args, **kwargs):
+            for index1, value1 in enumerate(args):
+                try:
+                    next(iter(value1))
+                except TypeError:
+                    raise TypeError(F"объект {value1} по индексу {index1}")
+
+            for index, value in kwargs.items():
+                try:
+                    next(iter(value))
+                except TypeError:
+                    raise TypeError(F"объект{value} по индексу {index}")
+            result = fn()
+            return result
+        return wrapper
+
+
+    @decorator
+    def hi(*args, **kwargs):
+        ...
+
+
+    hi([1, 2, 3], b=(i for i in range(10)))

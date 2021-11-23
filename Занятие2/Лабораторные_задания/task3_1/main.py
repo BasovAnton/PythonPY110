@@ -1,7 +1,6 @@
 def positive_check(fn):
     def wrapper(arg):
-        if arg <= 0:
-            raise ValueError("Аргумент функции не является положительным числом")
+        for
 
         result = fn(arg)
         return result
