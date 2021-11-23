@@ -1,5 +1,8 @@
-
+from itertools import count
 
 if __name__ == "__main__":
-    # Write your solution here
-    pass
+    q = 3
+    elem = (q**i for i in count(1, 1))
+
+    for i in range(1, 20):
+        print(next(elem))
