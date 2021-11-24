@@ -3,12 +3,20 @@ def get_distance(point: tuple):
 
 
 def task(points) -> list:
-    return sum(list(map(get_distance, points)))
+    point = new_list(points)
+    return sum(list(map(get_distance, point)))
 
 
 def pairwise(iterable):
     for i in range(len(iterable) - 1):
         yield [iterable[i], iterable[i + 1]]
+
+
+def new_list(lt):
+    list_ = []
+    for pair in pairwise(lt):
+        list_ += [pair]
+    return list_
 
 
 if __name__ == "__main__":
@@ -20,8 +28,4 @@ if __name__ == "__main__":
         (1.4, 2.9)
     ]
 
-    list_ = []
-    for pair in pairwise(pts):
-        list_ += [pair]
-
-    print(task(list_))
+    print(task(pts))
