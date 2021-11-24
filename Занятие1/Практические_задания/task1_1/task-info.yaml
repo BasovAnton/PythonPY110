@@ -12,15 +12,15 @@ files:
   visible: true
   placeholders:
   - offset: 134
-    length: 68
+    length: 31
     placeholder_text: '[get_distance(point) for point in points]  # TODO записать
       через map'
     initial_state:
       length: 68
       offset: 134
     initialized_from_dependency: false
-    selected: false
-    status: Unchecked
+    selected: true
+    status: Solved
     encrypted_possible_answer: list(map(get_distance, points))
   text: |
     def get_distance(point: tuple) -> int:
@@ -41,5 +41,8 @@ files:
 
         print(task(pts))
   learner_created: false
-status: Unchecked
+status: Solved
+feedback:
+  message: Congratulations!
+  time: Wed, 24 Nov 2021 11:32:21 UTC
 record: -1
