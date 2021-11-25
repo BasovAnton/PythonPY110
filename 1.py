@@ -19,6 +19,11 @@ x = []
 for pair in pairwise(pts):
     x += [pair]
 
-    print(x)
+print(x)
 
+if __name__ == "__main__":
+    kwargs = {1: 2, 2: 3, 4: 5}
+    x = map(lambda  key: (key, kwargs[key]), kwargs)
+    print(next(x))
+    print(next(x))
 

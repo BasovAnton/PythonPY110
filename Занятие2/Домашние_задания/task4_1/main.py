@@ -1,20 +1,23 @@
-def get_distance(point: tuple):
+from typing import Tuple
+
+
+def get_distance(point: tuple) -> float:
     return ((point[1][0] - point[0][0]) ** 2 + (point[1][1] - point[0][1]) ** 2) ** 0.5
 
 
-def task(points) -> list:
+def task(points: list) -> float:
     point = new_list(points)
-    return sum(list(map(get_distance, point)))
+    return round(sum(list(map(get_distance, point))), 2)
 
 
-def pairwise(iterable):
+def pairwise(iterable: list) -> Tuple[(float, float), (float, float)]:
     for i in range(len(iterable) - 1):
-        yield [iterable[i], iterable[i + 1]]
+        yield iterable[i], iterable[i + 1]
 
 
-def new_list(lt):
+def new_list(points: list) -> list:
     list_ = []
-    for pair in pairwise(lt):
+    for pair in pairwise(points):
         list_ += [pair]
     return list_
 
