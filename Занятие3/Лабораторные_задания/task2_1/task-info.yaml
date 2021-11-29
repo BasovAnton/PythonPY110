@@ -20,24 +20,24 @@ files:
   visible: true
   placeholders:
   - offset: 52
-    length: 60
+    length: 30
     placeholder_text: '{}  # TODO c помощью dict comprehension сформировать словарь'
     initial_state:
       length: 60
       offset: 52
     initialized_from_dependency: false
-    selected: false
-    status: Failed
+    selected: true
+    status: Solved
     encrypted_possible_answer: '{i: i ** 2 for i in range(1, 11)}'
-  - offset: 124
-    length: 45
+  - offset: 94
+    length: 34
     placeholder_text: '...  # TODO сеализовать словарь в JSON строку'
     initial_state:
       length: 45
       offset: 124
     initialized_from_dependency: false
-    selected: false
-    status: Failed
+    selected: true
+    status: Solved
     encrypted_possible_answer: json.dumps(dict_numbers, indent=4)
   text: |
     import json
@@ -54,23 +54,8 @@ files:
 - name: __init__.py
   visible: false
   learner_created: false
-status: Failed
+status: Solved
 feedback:
-  message: Incorrect
-  time: Tue, 23 Nov 2021 17:51:22 UTC
-  expected: |
-    {
-        "1": 1,
-        "2": 4,
-        "3": 9,
-        "4": 16,
-        "5": 25,
-        "6": 36,
-        "7": 49,
-        "8": 64,
-        "9": 81,
-        "10": 100
-    }
-  actual: |
-    Ellipsis
+  message: Congratulations!
+  time: Mon, 29 Nov 2021 06:34:00 UTC
 record: -1
