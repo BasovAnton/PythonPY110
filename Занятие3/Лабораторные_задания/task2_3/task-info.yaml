@@ -9,25 +9,25 @@ files:
   visible: true
   placeholders:
   - offset: 58
-    length: 62
+    length: 36
     placeholder_text: '# TODO считать содержимое JSON файла'
     initial_state:
       length: 36
       offset: 58
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: |-
       with open(filename) as f:
               json_data = json.load(f)
-  - offset: 132
-    length: 45
+  - offset: 107
+    length: 53
     placeholder_text: '...  # TODO найти максимальный элемент по ключу score'
     initial_state:
       length: 53
       offset: 107
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: 'max(json_data, key=lambda item: item["score"])'
   text: |
@@ -1256,5 +1256,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Mon, 29 Nov 2021 07:01:00 UTC
+  time: Tue, 30 Nov 2021 15:18:39 UTC
 record: -1

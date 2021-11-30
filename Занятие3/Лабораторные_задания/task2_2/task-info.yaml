@@ -69,26 +69,26 @@ files:
 - name: main.py
   visible: true
   placeholders:
-  - offset: 111
-    length: 37
+  - offset: 79
+    length: 51
     placeholder_text: '...  # TODO считать содержимое json файл input.json'
     initial_state:
       length: 51
       offset: 79
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: |-
       with open(input_filename) as f:
               json_data = json.load(f)
-  - offset: 191
-    length: 65
+  - offset: 136
+    length: 67
     placeholder_text: '...  # TODO записать содержимое в json файл output.json с отступами'
     initial_state:
       length: 67
       offset: 136
     initialized_from_dependency: false
-    selected: true
+    selected: false
     status: Solved
     encrypted_possible_answer: |-
       with open(output_filename, "w") as f:
@@ -202,5 +202,5 @@ files:
 status: Solved
 feedback:
   message: Congratulations!
-  time: Mon, 29 Nov 2021 06:49:49 UTC
+  time: Tue, 30 Nov 2021 15:18:35 UTC
 record: -1

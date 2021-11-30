@@ -10,7 +10,7 @@ def task(points: list) -> float:
     return round(sum(list(map(get_distance, point))), 2)
 
 
-def pairwise(iterable: list) -> Tuple[(float, float), (float, float)]:
+def pairwise(iterable: list): #-> Tuple[(float, float), (float, float)]
     for i in range(len(iterable) - 1):
         yield iterable[i], iterable[i + 1]
 
